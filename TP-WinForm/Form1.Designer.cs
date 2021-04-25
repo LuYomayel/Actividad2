@@ -1,5 +1,5 @@
 ﻿
-namespace TP_WinForm
+namespace Presentacion
 {
     partial class Form1
     {

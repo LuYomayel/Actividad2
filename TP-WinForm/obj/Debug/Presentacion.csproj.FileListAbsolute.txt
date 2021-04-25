@@ -1,0 +1,16 @@
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\TP-WinForm.exe.config
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\TP-WinForm.exe
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\TP-WinForm.pdb
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\Dominio.dll
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\Negocio.dll
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\Dominio.pdb
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\bin\Debug\Negocio.pdb
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.csprojAssemblyReference.cache
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP_WinForm.Properties.Resources.resources
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.csproj.GenerateResource.cache
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.csproj.CopyComplete
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP-WinForm.exe
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP-WinForm.pdb
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Form1.resources
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Agregar.resources
