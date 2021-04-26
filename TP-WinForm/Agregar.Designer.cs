@@ -222,6 +222,7 @@ namespace Presentacion
             this.Controls.Add(this.lblNombre);
             this.Name = "Agregar";
             this.Text = "Agregar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Agregar_FormClosing);
             this.Load += new System.EventHandler(this.Agregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();

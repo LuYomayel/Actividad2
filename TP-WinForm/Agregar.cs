@@ -22,7 +22,7 @@ namespace Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            
         }
         
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -63,6 +63,12 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Agregar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //if (MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+            //    return;
         }
     }
 }

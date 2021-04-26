@@ -63,7 +63,7 @@ namespace Presentacion
             Producto producto = new Producto();
             producto = productoNegocio.listarProducto(ID);
             txtNombre.Text = producto.Nombre;
-            txtDescripcion.Text = producto.Marca.Nombre;
+            txtDescripcion.Text = producto.Descripcion;
             txtUrlImagen.Text = producto.UrlImagen;
             numPrecio.Value = producto.Precio;
             cargarImagen(producto.UrlImagen);
