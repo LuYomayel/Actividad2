@@ -14,3 +14,4 @@ D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinFo
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP-WinForm.pdb
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Form1.resources
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Agregar.resources
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Modificar.resources

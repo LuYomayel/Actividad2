@@ -23,7 +23,11 @@ namespace Presentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Producto seleccionado = (Producto)dgw.CurrentRow.DataBoundItem;
+            ProductoNegocio productoNegocio = new ProductoNegocio();
+            productoNegocio.eliminar(seleccionado);
+            MessageBox.Show("Eliminado correctamente.");
+            cargarLista();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,6 +79,16 @@ namespace Presentacion
         {
             Agregar agregar = new Agregar();
             agregar.ShowDialog();
+            cargarLista();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Producto seleccionado = (Producto)dgw.CurrentRow.DataBoundItem;
+
+            Modificar modificar = new Modificar();
+            modificar.ID = seleccionado.CodigoArt;
+            modificar.ShowDialog();
             cargarLista();
         }
     }

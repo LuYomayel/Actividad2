@@ -15,7 +15,8 @@ namespace Dominio
         //Categoría(seleccionable de una lista desplegable.
         //Imagen.
         //Precio.
-        public string CodigoArt { get; set; }
+        public string CodigoArt { get; set; } 
+        
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
@@ -23,6 +24,7 @@ namespace Dominio
         public string UrlImagen { get; set; }
         public decimal Precio { get; set; }
 
+        
 
     }
 }
