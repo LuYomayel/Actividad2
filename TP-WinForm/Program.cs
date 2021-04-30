@@ -14,6 +14,7 @@ namespace Presentacion
         [STAThread]
         static void Main()
         {
+            // COMENTARIO DE MAXI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
