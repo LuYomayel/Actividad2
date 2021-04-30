@@ -163,6 +163,9 @@ namespace Presentacion
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Detalle";
             this.Text = "Detalle";
             this.Load += new System.EventHandler(this.Detalle_Load);

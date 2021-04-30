@@ -24,8 +24,7 @@ namespace Presentacion
         {
 
         }
-
-        private void Detalle_Load(object sender, EventArgs e)
+         private void Detalle_Load(object sender, EventArgs e)
         {
             lblCodigo1.Text = ID;
 
@@ -40,6 +39,7 @@ namespace Presentacion
             lblCategoria1.Text = producto.Categoria.Nombre;
             Convert.ToString(producto.Precio);
         }
+       
         //public void cargarImagen(string img)
         //{
         //    try

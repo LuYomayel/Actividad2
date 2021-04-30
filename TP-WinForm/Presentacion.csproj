@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +116,33 @@
       <Project>{88dcbfe1-b377-41c7-87b4-1922fd8e9885}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa2021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro agregado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro agregado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro modificado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro  eliminado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro detalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa registro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro lupa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

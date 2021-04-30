@@ -30,108 +30,201 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.dgw = new System.Windows.Forms.DataGridView();
-            this.pBox = new System.Windows.Forms.PictureBox();
             this.lblFiltro = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnDetalle = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.CbxCriterio = new System.Windows.Forms.ComboBox();
+            this.LblCriterio = new System.Windows.Forms.Label();
+            this.LblClave = new System.Windows.Forms.Label();
+            this.CbxClave = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pBox = new System.Windows.Forms.PictureBox();
+            this.LblAgregar = new System.Windows.Forms.Label();
+            this.LblModificar = new System.Windows.Forms.Label();
+            this.Lbleliminar = new System.Windows.Forms.Label();
+            this.Lbldetalle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).BeginInit();
             this.SuspendLayout();
             // 
             // dgw
             // 
+            this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw.Location = new System.Drawing.Point(33, 52);
+            this.dgw.Location = new System.Drawing.Point(24, 116);
             this.dgw.Name = "dgw";
-            this.dgw.Size = new System.Drawing.Size(496, 297);
+            this.dgw.ReadOnly = true;
+            this.dgw.Size = new System.Drawing.Size(496, 224);
             this.dgw.TabIndex = 0;
             this.dgw.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgw_MouseClick);
-            // 
-            // pBox
-            // 
-            this.pBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pBox.Location = new System.Drawing.Point(535, 52);
-            this.pBox.Name = "pBox";
-            this.pBox.Size = new System.Drawing.Size(265, 297);
-            this.pBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBox.TabIndex = 1;
-            this.pBox.TabStop = false;
             // 
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(30, 22);
+            this.lblFiltro.Location = new System.Drawing.Point(25, 86);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(32, 13);
             this.lblFiltro.TabIndex = 2;
             this.lblFiltro.Text = "Filtro:";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(33, 355);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(128, 355);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(226, 355);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnDetalle
-            // 
-            this.btnDetalle.Location = new System.Drawing.Point(322, 355);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(75, 23);
-            this.btnDetalle.TabIndex = 6;
-            this.btnDetalle.Text = "Detalle";
-            this.btnDetalle.UseVisualStyleBackColor = true;
-            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
-            // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(69, 22);
+            this.txtBuscar.Location = new System.Drawing.Point(63, 79);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(284, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(391, 20);
             this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
+            // 
+            // CbxCriterio
+            // 
+            this.CbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxCriterio.FormattingEnabled = true;
+            this.CbxCriterio.Location = new System.Drawing.Point(63, 52);
+            this.CbxCriterio.Name = "CbxCriterio";
+            this.CbxCriterio.Size = new System.Drawing.Size(96, 21);
+            this.CbxCriterio.TabIndex = 9;
+            // 
+            // LblCriterio
+            // 
+            this.LblCriterio.AutoSize = true;
+            this.LblCriterio.Location = new System.Drawing.Point(15, 60);
+            this.LblCriterio.Name = "LblCriterio";
+            this.LblCriterio.Size = new System.Drawing.Size(42, 13);
+            this.LblCriterio.TabIndex = 10;
+            this.LblCriterio.Text = "Criterio:";
+            // 
+            // LblClave
+            // 
+            this.LblClave.AutoSize = true;
+            this.LblClave.Location = new System.Drawing.Point(20, 33);
+            this.LblClave.Name = "LblClave";
+            this.LblClave.Size = new System.Drawing.Size(37, 13);
+            this.LblClave.TabIndex = 12;
+            this.LblClave.Text = "Clave:";
+            // 
+            // CbxClave
+            // 
+            this.CbxClave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxClave.FormattingEnabled = true;
+            this.CbxClave.Location = new System.Drawing.Point(63, 25);
+            this.CbxClave.Name = "CbxClave";
+            this.CbxClave.Size = new System.Drawing.Size(96, 21);
+            this.CbxClave.TabIndex = 11;
+            this.CbxClave.SelectedIndexChanged += new System.EventHandler(this.CbxClave_SelectedIndexChanged);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(359, 20);
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Image = global::TP_WinForm.Properties.Resources.registro_lupa;
+            this.btnBuscar.Location = new System.Drawing.Point(460, 44);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(58, 66);
             this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnDetalle
+            // 
+            this.btnDetalle.Image = global::TP_WinForm.Properties.Resources.registro_detalle;
+            this.btnDetalle.Location = new System.Drawing.Point(443, 365);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(75, 64);
+            this.btnDetalle.TabIndex = 6;
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::TP_WinForm.Properties.Resources.registro__eliminado;
+            this.btnEliminar.Location = new System.Drawing.Point(304, 365);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 64);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::TP_WinForm.Properties.Resources.registro_modificado;
+            this.btnModificar.Location = new System.Drawing.Point(168, 365);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 64);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::TP_WinForm.Properties.Resources.registro_agregado1;
+            this.btnAgregar.Location = new System.Drawing.Point(38, 365);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 64);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // pBox
+            // 
+            this.pBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pBox.Location = new System.Drawing.Point(526, 116);
+            this.pBox.Name = "pBox";
+            this.pBox.Size = new System.Drawing.Size(265, 224);
+            this.pBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBox.TabIndex = 1;
+            this.pBox.TabStop = false;
+            // 
+            // LblAgregar
+            // 
+            this.LblAgregar.AutoSize = true;
+            this.LblAgregar.Location = new System.Drawing.Point(49, 444);
+            this.LblAgregar.Name = "LblAgregar";
+            this.LblAgregar.Size = new System.Drawing.Size(44, 13);
+            this.LblAgregar.TabIndex = 13;
+            this.LblAgregar.Text = "Agregar";
+            // 
+            // LblModificar
+            // 
+            this.LblModificar.AutoSize = true;
+            this.LblModificar.Location = new System.Drawing.Point(180, 444);
+            this.LblModificar.Name = "LblModificar";
+            this.LblModificar.Size = new System.Drawing.Size(50, 13);
+            this.LblModificar.TabIndex = 14;
+            this.LblModificar.Text = "Modificar";
+            // 
+            // Lbleliminar
+            // 
+            this.Lbleliminar.AutoSize = true;
+            this.Lbleliminar.Location = new System.Drawing.Point(319, 444);
+            this.Lbleliminar.Name = "Lbleliminar";
+            this.Lbleliminar.Size = new System.Drawing.Size(43, 13);
+            this.Lbleliminar.TabIndex = 15;
+            this.Lbleliminar.Text = "Eliminar";
+            // 
+            // Lbldetalle
+            // 
+            this.Lbldetalle.AutoSize = true;
+            this.Lbldetalle.Location = new System.Drawing.Point(457, 444);
+            this.Lbldetalle.Name = "Lbldetalle";
+            this.Lbldetalle.Size = new System.Drawing.Size(40, 13);
+            this.Lbldetalle.TabIndex = 16;
+            this.Lbldetalle.Text = "Detalle";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 407);
+            this.ClientSize = new System.Drawing.Size(812, 466);
+            this.Controls.Add(this.Lbldetalle);
+            this.Controls.Add(this.Lbleliminar);
+            this.Controls.Add(this.LblModificar);
+            this.Controls.Add(this.LblAgregar);
+            this.Controls.Add(this.LblClave);
+            this.Controls.Add(this.CbxClave);
+            this.Controls.Add(this.LblCriterio);
+            this.Controls.Add(this.CbxCriterio);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnDetalle);
@@ -141,8 +234,11 @@ namespace Presentacion
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.pBox);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).EndInit();
@@ -162,6 +258,14 @@ namespace Presentacion
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox CbxCriterio;
+        private System.Windows.Forms.Label LblCriterio;
+        private System.Windows.Forms.Label LblClave;
+        private System.Windows.Forms.ComboBox CbxClave;
+        private System.Windows.Forms.Label LblAgregar;
+        private System.Windows.Forms.Label LblModificar;
+        private System.Windows.Forms.Label Lbleliminar;
+        private System.Windows.Forms.Label Lbldetalle;
     }
 }
 

@@ -29,7 +29,6 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbxProducto = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -46,17 +45,8 @@ namespace Presentacion
             this.numPrecio = new System.Windows.Forms.NumericUpDown();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbxProducto
-            // 
-            this.pbxProducto.Location = new System.Drawing.Point(289, 30);
-            this.pbxProducto.Name = "pbxProducto";
-            this.pbxProducto.Size = new System.Drawing.Size(246, 225);
-            this.pbxProducto.TabIndex = 26;
-            this.pbxProducto.TabStop = false;
             // 
             // btnCancelar
             // 
@@ -83,21 +73,21 @@ namespace Presentacion
             this.txtDescripcion.Location = new System.Drawing.Point(102, 131);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(144, 20);
-            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.TabIndex = 150;
             // 
             // txtUrlImagen
             // 
             this.txtUrlImagen.Location = new System.Drawing.Point(102, 167);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(144, 20);
-            this.txtUrlImagen.TabIndex = 20;
+            this.txtUrlImagen.TabIndex = 1000;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(102, 59);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 20);
-            this.txtNombre.TabIndex = 14;
+            this.txtNombre.TabIndex = 50;
             // 
             // lblUrlImagen
             // 
@@ -128,6 +118,7 @@ namespace Presentacion
             // 
             // cboMarca
             // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(102, 95);
             this.cboMarca.Name = "cboMarca";
@@ -163,11 +154,13 @@ namespace Presentacion
             // 
             // cboCategoria
             // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(102, 203);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(144, 21);
             this.cboCategoria.TabIndex = 22;
+            this.cboCategoria.SelectedIndexChanged += new System.EventHandler(this.cboCategoria_SelectedIndexChanged);
             // 
             // numPrecio
             // 
@@ -196,20 +189,19 @@ namespace Presentacion
             this.txtCodigo.Location = new System.Drawing.Point(102, 27);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(144, 20);
-            this.txtCodigo.TabIndex = 32;
+            this.txtCodigo.TabIndex = 50;
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 351);
+            this.ClientSize = new System.Drawing.Size(287, 351);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.cboMarca);
-            this.Controls.Add(this.pbxProducto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboCategoria);
@@ -220,11 +212,13 @@ namespace Presentacion
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Agregar";
             this.Text = "Agregar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Agregar_FormClosing);
             this.Load += new System.EventHandler(this.Agregar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,8 +226,6 @@ namespace Presentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pbxProducto;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtDescripcion;

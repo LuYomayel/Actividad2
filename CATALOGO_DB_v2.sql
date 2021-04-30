@@ -1,101 +1,91 @@
 use master
 go
-create database CATALOGO_DB
+create database POKEDEX_DB
 go
-use CATALOGO_DB
+use POKEDEX_DB
 go
-USE [CATALOGO_DB]
+USE POKEDEX_DB
 GO
 
+/****** Object:  Table [dbo].[ELEMENTOS]    Script Date: 4/15/2021 6:37:41 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-SET ANSI_PADDING ON
-GO
-
-CREATE TABLE [dbo].[MARCAS](
+CREATE TABLE [dbo].[ELEMENTOS](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Descripcion] [varchar](50) NULL,
- CONSTRAINT [PK_MARCAS] PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK_ELEMENTOS] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
 
-SET ANSI_PADDING OFF
+USE [POKEDEX_DB]
 GO
 
-USE [CATALOGO_DB]
-GO
-
-/****** Object:  Table [dbo].[CATEGORIAS]    Script Date: 08/09/2019 10:32:14 a.m. ******/
+/****** Object:  Table [dbo].[POKEMONS]    Script Date: 4/15/2021 6:37:50 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-SET ANSI_PADDING ON
-GO
-
-CREATE TABLE [dbo].[CATEGORIAS](
+CREATE TABLE [dbo].[POKEMONS](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Descripcion] [varchar](50) NULL,
- CONSTRAINT [PK_CATEGORIAS] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
-GO
-
-SET ANSI_PADDING OFF
-GO
-
-USE [CATALOGO_DB]
-GO
-
-/****** Object:  Table [dbo].[ARTICULOS]    Script Date: 08/09/2019 10:32:24 a.m. ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-SET ANSI_PADDING ON
-GO
-
-CREATE TABLE [dbo].[ARTICULOS](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Codigo] [varchar](50) NULL,
+	[Numero] [int] NULL,
 	[Nombre] [varchar](50) NULL,
-	[Descripcion] [varchar](150) NULL,
-	[IdMarca] [int] NULL,
-	[IdCategoria] [int] NULL,
-	[ImagenUrl] [varchar](1000) NULL,
-	[Precio] [money] NULL,
- CONSTRAINT [PK_ARTICULOS] PRIMARY KEY CLUSTERED 
+	[Descripcion] [varchar](50) NULL,
+	[UrlImagen] [varchar](300) NULL,
+	[IdTipo] [int] NULL,
+	[IdDebilidad] [int] NULL,
+	[IdEvolucion] [int] NULL,
+ CONSTRAINT [PK_POKEMONS] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
 
-SET ANSI_PADDING OFF
+ALTER TABLE [dbo].[POKEMONS]  WITH CHECK ADD  CONSTRAINT [FK_POKEMONS_ELEMENTOS] FOREIGN KEY([IdTipo])
+REFERENCES [dbo].[ELEMENTOS] ([Id])
 GO
 
-insert into MARCAS values ('Samsung'), ('Apple'), ('Sony'), ('Huawei'), ('Motorola')
-insert into CATEGORIAS values ('Celulares'),('Televisores'), ('Media'), ('Audio')
-insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542', 69.999),
-('M03', 'Moto G Play 7ma Gen', 'Ya siete de estos?', 1, 5, 'https://www.motorola.cl/arquivos/moto-g7-play-img-product.png?v=636862863804700000', 15699),
-('S99', 'Play 4', 'Ya no se cuantas versiones hay', 3, 3, 'https://www.euronics.cz/image/product/800x800/532620.jpg', 35000),
-('S56', 'Bravia 55', 'Alta tele', 3, 2, 'https://intercompras.com/product_thumb_keepratio_2.php?img=images/product/SONY_KDL-55W950A.jpg&w=650&h=450', 49500),
-('A23', 'Apple TV', 'lindo loro', 2, 3, 'https://cnnespanol2.files.wordpress.com/2015/12/gadgets-mc3a1s-populares-apple-tv-2015-18.jpg?quality=100&strip=info&w=460&h=260&crop=1', 7850)
+ALTER TABLE [dbo].[POKEMONS] CHECK CONSTRAINT [FK_POKEMONS_ELEMENTOS]
+GO
 
-select * from ARTICULOS
+ALTER TABLE [dbo].[POKEMONS]  WITH CHECK ADD  CONSTRAINT [FK_POKEMONS_ELEMENTOS1] FOREIGN KEY([IdDebilidad])
+REFERENCES [dbo].[ELEMENTOS] ([Id])
+GO
+
+ALTER TABLE [dbo].[POKEMONS] CHECK CONSTRAINT [FK_POKEMONS_ELEMENTOS1]
+GO
+
+ALTER TABLE [dbo].[POKEMONS]  WITH CHECK ADD  CONSTRAINT [FK_POKEMONS_POKEMONS] FOREIGN KEY([IdEvolucion])
+REFERENCES [dbo].[POKEMONS] ([Id])
+GO
+
+ALTER TABLE [dbo].[POKEMONS] CHECK CONSTRAINT [FK_POKEMONS_POKEMONS]
+GO
+
+-- inserta pokemons
+insert into POKEMONS values(1, 'Bulbasaur', 'Este Pokémon nace con una semilla en el lomo.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png', null, null, null)
+insert into POKEMONS values(2, 'Ivysaur', 'Cuando le crece bastante el bulbo del lomo.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png', null, null, null)
+insert into POKEMONS values(3, 'Venusaur', 'La planta florece cuando absorbe energía solar.', 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png', null, null, null)
+
+go
+-- inserta elementos 
+insert into ELEMENTOS values ('Planta')
+insert into ELEMENTOS values ('Fuego')
+insert into ELEMENTOS values ('Agua')
+
+go
+-- actualiza tipo y debilidad a los pokemons
+update pokemons set IdTipo = 1
+update pokemons set IdDebilidad = 2
+
+--  actualiza el id de evlucion, ver bien los ids
+-- update pokemons set IdEvolucion = 7 where id = 6

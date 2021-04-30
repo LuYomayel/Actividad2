@@ -22,7 +22,10 @@ namespace Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            
+            DialogResult resultado = MessageBox.Show("Esta seguro que desea cancelar el alta del registro?", "Se producira el cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+                Close();
         }
         
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -69,6 +72,11 @@ namespace Presentacion
         {
             //if (MessageBox.Show("De verad querés salir? Perderás los datos", "Saliendo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
             //    return;
+        }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

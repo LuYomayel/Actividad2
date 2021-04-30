@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
 
+
 namespace Negocio
 {
     public class ProductoNegocio
     {
-        
+
         public List<Producto> listar()
         {
             List<Producto> lista = new List<Producto>();
@@ -34,7 +35,7 @@ namespace Negocio
 
                     lista.Add(aux);
                 }
-                
+
                 return lista;
             }
             catch (Exception ex)
@@ -92,13 +93,17 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion Marca, C.Descripcion Categoria from ARTICULOS as A inner join Marcas as M on M.ID = A.IdMarca inner join CATEGORIAS as C on C.Id = A.IdCategoria where A.Codigo = '" + ID + "'");
+                datos.setearConsulta("select A.Codigo, A.Nombre, A.Descripcion," +
+                    " A.Precio, A.ImagenUrl, M.Descripcion Marca, C.Descripcion " +
+                    "Categoria from ARTICULOS as A inner join Marcas as M on M.ID" +
+                    " = A.IdMarca inner join CATEGORIAS as C on C.Id = A.IdCategoria " +
+                    "where A.Codigo = '" + ID + "'");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Producto aux = new Producto();
-                    
+
                     producto.Nombre = (string)datos.Lector["Nombre"];
                     producto.Descripcion = (string)datos.Lector["Descripcion"];
                     producto.Precio = (decimal)datos.Lector["Precio"];
@@ -106,7 +111,7 @@ namespace Negocio
                     producto.Marca = new Marca((string)datos.Lector["Marca"]);
                     producto.Categoria = new Categoria((string)datos.Lector["Categoria"]);
 
-                    
+
                 }
 
                 return producto;
@@ -118,13 +123,12 @@ namespace Negocio
             }
 
         }
-
         public void eliminar(Producto nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                
+
                 datos.setearConsulta("delete from Articulos where codigo = '" + nuevo.CodigoArt + "'");
 
                 datos.ejectutarAccion();
@@ -140,5 +144,71 @@ namespace Negocio
             }
         }
 
+        public List<Producto> listarFiltrado(string filtro, string clave, string criterio)
+        {
+
+            List<Producto> lista = new List<Producto>();
+            AccesoDatos datos = new AccesoDatos();
+            String consulta = "select A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion Marca, C.Descripcion Categoria from ARTICULOS as A inner join Marcas as M on M.ID = A.IdMarca inner join CATEGORIAS as C on C.Id = A.IdCategoria where A.";
+
+            try
+
+            {
+
+
+                switch (criterio)
+                {
+                    case "Comienza con":
+                        consulta = consulta + clave + " Like '" + filtro + "%'";
+                        break;
+                    case "Termina con":
+                        consulta = consulta + clave + " Like '%" + filtro + "'";
+                        break;
+                    case "Contiene":
+                        consulta = consulta + clave + " Like '%" + filtro + "%'";
+                        break;
+                    case "Mayor a":
+                        consulta = consulta + clave + " > " + filtro;
+                        break;
+                    case "Igual a":
+                        consulta = consulta + clave + " = " + filtro;
+                        break;
+                    case "Menor a":
+                        consulta = consulta + clave + " < " + filtro;
+                        break;
+                }
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Producto aux = new Producto();
+                    aux.CodigoArt = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                    aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+
+                    lista.Add(aux);
+                }
+                return lista;
+
+            }
+
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
     }
 }
+
+
+    

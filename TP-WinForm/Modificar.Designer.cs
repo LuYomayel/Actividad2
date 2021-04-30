@@ -52,10 +52,12 @@ namespace Presentacion
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Location = new System.Drawing.Point(100, 27);
+            this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(144, 20);
-            this.txtCodigo.TabIndex = 49;
+            this.txtCodigo.TabIndex = 50;
             // 
             // lblCodigo
             // 
@@ -99,6 +101,7 @@ namespace Presentacion
             // 
             // cboMarca
             // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(100, 95);
             this.cboMarca.Name = "cboMarca";
@@ -122,6 +125,7 @@ namespace Presentacion
             this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -135,6 +139,7 @@ namespace Presentacion
             // 
             // cboCategoria
             // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(100, 203);
             this.cboCategoria.Name = "cboCategoria";
@@ -146,21 +151,21 @@ namespace Presentacion
             this.txtDescripcion.Location = new System.Drawing.Point(100, 131);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(144, 20);
-            this.txtDescripcion.TabIndex = 35;
+            this.txtDescripcion.TabIndex = 150;
             // 
             // txtUrlImagen
             // 
             this.txtUrlImagen.Location = new System.Drawing.Point(100, 167);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(144, 20);
-            this.txtUrlImagen.TabIndex = 37;
+            this.txtUrlImagen.TabIndex = 10000;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(100, 59);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 20);
-            this.txtNombre.TabIndex = 33;
+            this.txtNombre.TabIndex = 50;
             // 
             // lblCategoria
             // 
@@ -220,6 +225,9 @@ namespace Presentacion
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Modificar";
             this.Text = "Modificar";
             this.Load += new System.EventHandler(this.Modificar_Load);

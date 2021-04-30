@@ -38,10 +38,10 @@ namespace Presentacion
                 productoNegocio.modificar(producto);
                 Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.ToString());
             }
             
         }
@@ -83,6 +83,14 @@ namespace Presentacion
             }
             
             
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Esta seguro que desea cancelar la modificacion del registro?", "Se producira el cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+                Close();
         }
     }
 }
