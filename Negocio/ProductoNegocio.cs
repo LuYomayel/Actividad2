@@ -19,19 +19,22 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion Marca, C.Descripcion Categoria from ARTICULOS as A inner join Marcas as M on M.ID = A.IdMarca inner join CATEGORIAS as C on C.Id = A.IdCategoria");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion Marca, C.Descripcion Categoria, M.Id IdMarca, C.Id IdCategoria from ARTICULOS as A inner join Marcas as M on M.ID = A.IdMarca inner join CATEGORIAS as C on C.Id = A.IdCategoria");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Producto aux = new Producto();
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.CodigoArt = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
                     aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
 
                     lista.Add(aux);
                 }
@@ -71,8 +74,17 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                //string valores = "values( '" + nuevo.CodigoArt + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "', " + nuevo.Marca.Id + ", " + nuevo.Categoria.Id + "  ," + nuevo.Precio + ")";
-                datos.setearConsulta("update ARTICULOS set codigo = '" + nuevo.CodigoArt + "', nombre = '" + nuevo.Nombre + "',Descripcion = '" + nuevo.Descripcion + "', ImagenUrl = '" + nuevo.UrlImagen + "', precio = " + nuevo.Precio + ", idmarca = '" + nuevo.Marca.Id + "' , idcategoria = '" + nuevo.Categoria.Id + "' where codigo = '" + nuevo.CodigoArt + "'");
+                //datos.setearConsulta("update ARTICULOS set codigo ='" + nuevo.CodigoArt + "' where id = " + nuevo.Id);
+                datos.setearConsulta("update ARTICULOS set codigo = '" + nuevo.CodigoArt + "', nombre = '" + nuevo.Nombre + "',Descripcion = '" + nuevo.Descripcion + "', ImagenUrl = '" + nuevo.UrlImagen + "', precio = '" + nuevo.Precio + "', idmarca = '" + nuevo.Marca.Id + "' , idcategoria = '" + nuevo.Categoria.Id + "' where id = '" + nuevo.Id + "'");
+                /*datos.setearConsulta("update ARTICULOS set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @urlImagen, precio = @precio, IdMarca = @idMarca, IdCategoria = @idCategoria where codigo = @id");
+                datos.setearParametro("@codigo", nuevo.CodigoArt);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@urlImagen", nuevo.UrlImagen);
+                datos.setearParametro("@precio", nuevo.Precio);
+                datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
+                datos.setearParametro("@idMarca", nuevo.Marca.Id);
+                datos.setearParametro("@id", nuevo.Id);*/
 
                 datos.ejectutarAccion();
 

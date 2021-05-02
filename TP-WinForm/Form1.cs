@@ -51,6 +51,7 @@ namespace Presentacion
 
                 //Oculto Columnas de la grilla.
                 //Puedo poner el indice de la columna o el nombre de la propiedad.
+                dgw.Columns["id"].Visible = false;
                 dgw.Columns["UrlImagen"].Visible = false;
                 dgw.Columns["Descripcion"].Visible = false;
                 dgw.Columns["Categoria"].Visible = false;
@@ -86,6 +87,7 @@ namespace Presentacion
 
                 //Oculto Columnas de la grilla.
                 //Puedo poner el indice de la columna o el nombre de la propiedad.
+                dgw.Columns["id"].Visible = false;
                 dgw.Columns["UrlImagen"].Visible = false;
                 dgw.Columns["Descripcion"].Visible = false;
                 dgw.Columns["Categoria"].Visible = false;
@@ -133,8 +135,7 @@ namespace Presentacion
         {
             Producto seleccionado = (Producto)dgw.CurrentRow.DataBoundItem;
 
-            Modificar modificar = new Modificar();
-            modificar.ID = seleccionado.CodigoArt;
+            Modificar modificar = new Modificar(seleccionado);
             modificar.ShowDialog();
             cargarLista();
         }

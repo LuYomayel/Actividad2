@@ -14,20 +14,25 @@ namespace Presentacion
 {
     public partial class Modificar : Form
     {
-        public string ID { get; set; }
         
+        private Producto producto;
         public Modificar()
         {
             InitializeComponent();
             
         }
+        public Modificar(Producto producto)
+        {
+            InitializeComponent();
+            this.producto = producto;
+        }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Producto producto = new Producto();
             ProductoNegocio productoNegocio = new ProductoNegocio();
             try
             {
+                   
                 producto.CodigoArt = txtCodigo.Text;
                 producto.Nombre = txtNombre.Text;
                 producto.Descripcion = txtDescripcion.Text;
@@ -58,24 +63,28 @@ namespace Presentacion
         }
         private void Modificar_Load(object sender, EventArgs e)
         {
-            txtCodigo.Text = ID;
-            ProductoNegocio productoNegocio = new ProductoNegocio();
-            Producto producto = new Producto();
-            producto = productoNegocio.listarProducto(ID);
+            txtID.Text = Convert.ToString(producto.Id);
+            txtCodigo.Text = producto.CodigoArt;
             txtNombre.Text = producto.Nombre;
             txtDescripcion.Text = producto.Descripcion;
             txtUrlImagen.Text = producto.UrlImagen;
             numPrecio.Value = producto.Precio;
             cargarImagen(producto.UrlImagen);
 
+            
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio CategoriaNegocio = new CategoriaNegocio();
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
-                cboMarca.Text = producto.Marca.Nombre;
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Nombre";
+                cboMarca.SelectedValue = producto.Marca.Id;
+
                 cboCategoria.DataSource = CategoriaNegocio.listar();
-                cboCategoria.Text = producto.Categoria.Nombre;
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Nombre";
+                cboCategoria.SelectedValue = producto.Categoria.Id;
             }
             catch (Exception ex)
             {

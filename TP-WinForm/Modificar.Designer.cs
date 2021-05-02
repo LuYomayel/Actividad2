@@ -46,6 +46,7 @@ namespace Presentacion
             this.lblUrlImagen = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -104,9 +105,10 @@ namespace Presentacion
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(100, 95);
+            this.cboMarca.MaxDropDownItems = 5;
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(144, 21);
-            this.cboMarca.TabIndex = 44;
+            this.cboMarca.TabIndex = 4;
             // 
             // pbxProducto
             // 
@@ -203,11 +205,21 @@ namespace Presentacion
             this.lblNombre.TabIndex = 34;
             this.lblNombre.Text = "Nombre:";
             // 
+            // txtID
+            // 
+            this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtID.Location = new System.Drawing.Point(323, 288);
+            this.txtID.MaxLength = 6;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(144, 20);
+            this.txtID.TabIndex = 10001;
+            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 344);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.numPrecio);
@@ -257,5 +269,6 @@ namespace Presentacion
         private System.Windows.Forms.Label lblUrlImagen;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

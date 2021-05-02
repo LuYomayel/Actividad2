@@ -15,6 +15,7 @@ namespace Dominio
         //Categoría(seleccionable de una lista desplegable.
         //Imagen.
         //Precio.
+        public int Id { get; set; }
         public string CodigoArt { get; set; } 
         
         public string Nombre { get; set; }
