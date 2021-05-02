@@ -32,17 +32,22 @@ namespace Presentacion
             this.dgw = new System.Windows.Forms.DataGridView();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.LblAgregar = new System.Windows.Forms.Label();
+            this.LblModificar = new System.Windows.Forms.Label();
+            this.Lbleliminar = new System.Windows.Forms.Label();
+            this.Lbldetalle = new System.Windows.Forms.Label();
+            this.GBAltas = new System.Windows.Forms.GroupBox();
+            this.LblCategorias = new System.Windows.Forms.Label();
+            this.LblMarca = new System.Windows.Forms.Label();
+            this.BtnAgregarMarcas = new System.Windows.Forms.Button();
+            this.BtnCategorias = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pBox = new System.Windows.Forms.PictureBox();
-            this.LblAgregar = new System.Windows.Forms.Label();
-            this.LblModificar = new System.Windows.Forms.Label();
-            this.Lbleliminar = new System.Windows.Forms.Label();
-            this.Lbldetalle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
+            this.GBAltas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,16 +79,92 @@ namespace Presentacion
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
-            // btnBuscar
+            // LblAgregar
             // 
-            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnBuscar.Image = global::TP_WinForm.Properties.Resources.registro_lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(462, 29);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 55);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.LblAgregar.AutoSize = true;
+            this.LblAgregar.Location = new System.Drawing.Point(49, 444);
+            this.LblAgregar.Name = "LblAgregar";
+            this.LblAgregar.Size = new System.Drawing.Size(44, 13);
+            this.LblAgregar.TabIndex = 13;
+            this.LblAgregar.Text = "Agregar";
+            // 
+            // LblModificar
+            // 
+            this.LblModificar.AutoSize = true;
+            this.LblModificar.Location = new System.Drawing.Point(180, 444);
+            this.LblModificar.Name = "LblModificar";
+            this.LblModificar.Size = new System.Drawing.Size(50, 13);
+            this.LblModificar.TabIndex = 14;
+            this.LblModificar.Text = "Modificar";
+            // 
+            // Lbleliminar
+            // 
+            this.Lbleliminar.AutoSize = true;
+            this.Lbleliminar.Location = new System.Drawing.Point(319, 444);
+            this.Lbleliminar.Name = "Lbleliminar";
+            this.Lbleliminar.Size = new System.Drawing.Size(43, 13);
+            this.Lbleliminar.TabIndex = 15;
+            this.Lbleliminar.Text = "Eliminar";
+            // 
+            // Lbldetalle
+            // 
+            this.Lbldetalle.AutoSize = true;
+            this.Lbldetalle.Location = new System.Drawing.Point(457, 444);
+            this.Lbldetalle.Name = "Lbldetalle";
+            this.Lbldetalle.Size = new System.Drawing.Size(40, 13);
+            this.Lbldetalle.TabIndex = 16;
+            this.Lbldetalle.Text = "Detalle";
+            // 
+            // GBAltas
+            // 
+            this.GBAltas.Controls.Add(this.LblCategorias);
+            this.GBAltas.Controls.Add(this.LblMarca);
+            this.GBAltas.Controls.Add(this.BtnAgregarMarcas);
+            this.GBAltas.Controls.Add(this.BtnCategorias);
+            this.GBAltas.ForeColor = System.Drawing.Color.DarkGreen;
+            this.GBAltas.Location = new System.Drawing.Point(591, 354);
+            this.GBAltas.Name = "GBAltas";
+            this.GBAltas.Size = new System.Drawing.Size(200, 100);
+            this.GBAltas.TabIndex = 19;
+            this.GBAltas.TabStop = false;
+            this.GBAltas.Text = "Altas";
+            // 
+            // LblCategorias
+            // 
+            this.LblCategorias.AutoSize = true;
+            this.LblCategorias.Location = new System.Drawing.Point(115, 74);
+            this.LblCategorias.Name = "LblCategorias";
+            this.LblCategorias.Size = new System.Drawing.Size(57, 13);
+            this.LblCategorias.TabIndex = 20;
+            this.LblCategorias.Text = "Categorias";
+            // 
+            // LblMarca
+            // 
+            this.LblMarca.AutoSize = true;
+            this.LblMarca.Location = new System.Drawing.Point(22, 74);
+            this.LblMarca.Name = "LblMarca";
+            this.LblMarca.Size = new System.Drawing.Size(42, 13);
+            this.LblMarca.TabIndex = 21;
+            this.LblMarca.Text = "Marcas";
+            // 
+            // BtnAgregarMarcas
+            // 
+            this.BtnAgregarMarcas.Image = global::TP_WinForm.Properties.Resources.carpeta;
+            this.BtnAgregarMarcas.Location = new System.Drawing.Point(25, 19);
+            this.BtnAgregarMarcas.Name = "BtnAgregarMarcas";
+            this.BtnAgregarMarcas.Size = new System.Drawing.Size(44, 52);
+            this.BtnAgregarMarcas.TabIndex = 17;
+            this.BtnAgregarMarcas.UseVisualStyleBackColor = true;
+            this.BtnAgregarMarcas.Click += new System.EventHandler(this.BtnAgregarMarcas_Click);
+            // 
+            // BtnCategorias
+            // 
+            this.BtnCategorias.Image = global::TP_WinForm.Properties.Resources.carpeta;
+            this.BtnCategorias.Location = new System.Drawing.Point(118, 19);
+            this.BtnCategorias.Name = "BtnCategorias";
+            this.BtnCategorias.Size = new System.Drawing.Size(44, 52);
+            this.BtnCategorias.TabIndex = 18;
+            this.BtnCategorias.UseVisualStyleBackColor = true;
             // 
             // btnDetalle
             // 
@@ -135,52 +216,16 @@ namespace Presentacion
             this.pBox.TabIndex = 1;
             this.pBox.TabStop = false;
             // 
-            // LblAgregar
-            // 
-            this.LblAgregar.AutoSize = true;
-            this.LblAgregar.Location = new System.Drawing.Point(49, 444);
-            this.LblAgregar.Name = "LblAgregar";
-            this.LblAgregar.Size = new System.Drawing.Size(44, 13);
-            this.LblAgregar.TabIndex = 13;
-            this.LblAgregar.Text = "Agregar";
-            // 
-            // LblModificar
-            // 
-            this.LblModificar.AutoSize = true;
-            this.LblModificar.Location = new System.Drawing.Point(180, 444);
-            this.LblModificar.Name = "LblModificar";
-            this.LblModificar.Size = new System.Drawing.Size(50, 13);
-            this.LblModificar.TabIndex = 14;
-            this.LblModificar.Text = "Modificar";
-            // 
-            // Lbleliminar
-            // 
-            this.Lbleliminar.AutoSize = true;
-            this.Lbleliminar.Location = new System.Drawing.Point(319, 444);
-            this.Lbleliminar.Name = "Lbleliminar";
-            this.Lbleliminar.Size = new System.Drawing.Size(43, 13);
-            this.Lbleliminar.TabIndex = 15;
-            this.Lbleliminar.Text = "Eliminar";
-            // 
-            // Lbldetalle
-            // 
-            this.Lbldetalle.AutoSize = true;
-            this.Lbldetalle.Location = new System.Drawing.Point(457, 444);
-            this.Lbldetalle.Name = "Lbldetalle";
-            this.Lbldetalle.Size = new System.Drawing.Size(40, 13);
-            this.Lbldetalle.TabIndex = 16;
-            this.Lbldetalle.Text = "Detalle";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 466);
+            this.Controls.Add(this.GBAltas);
             this.Controls.Add(this.Lbldetalle);
             this.Controls.Add(this.Lbleliminar);
             this.Controls.Add(this.LblModificar);
             this.Controls.Add(this.LblAgregar);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEliminar);
@@ -196,6 +241,8 @@ namespace Presentacion
             this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
+            this.GBAltas.ResumeLayout(false);
+            this.GBAltas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,11 +259,15 @@ namespace Presentacion
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label LblAgregar;
         private System.Windows.Forms.Label LblModificar;
         private System.Windows.Forms.Label Lbleliminar;
         private System.Windows.Forms.Label Lbldetalle;
+        private System.Windows.Forms.Button BtnAgregarMarcas;
+        private System.Windows.Forms.Button BtnCategorias;
+        private System.Windows.Forms.GroupBox GBAltas;
+        private System.Windows.Forms.Label LblCategorias;
+        private System.Windows.Forms.Label LblMarca;
     }
 }
 

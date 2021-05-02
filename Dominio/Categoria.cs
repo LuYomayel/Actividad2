@@ -22,6 +22,10 @@ namespace Dominio
             Nombre = nombre;
         }
 
+        public Categoria()
+        {
+        }
+
         public override string ToString()
         {
             return Nombre;

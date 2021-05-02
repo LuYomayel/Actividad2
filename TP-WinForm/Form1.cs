@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using TP_WinForm;
 
 namespace Presentacion
 {
@@ -138,33 +139,7 @@ namespace Presentacion
             cargarLista();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            busqueda();
-
-            /* Comento lo que hiciste vos
-             * try
-            {
-                if (txtBuscar.Text !="")
-                {
-                    cargarListafiltrada();
-                   
-                }
-                else
-                    MessageBox.Show("El texto filtro no puede estar vacio");
-                txtBuscar.BackColor = Color.Red;
-               
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }*/
-
-
-        }
-
+      
         private void btnDetalle_Click(object sender, EventArgs e)
         {
             Producto seleccionado = (Producto)dgw.CurrentRow.DataBoundItem;
@@ -202,13 +177,7 @@ namespace Presentacion
             /// Lo que hizo el profe
             busqueda();
 
-            /* Comento lo que hiciste
-            TextBox tb = (TextBox)sender; // investigar
-            if (tb.Text.Length == 0)
-                tb.BackColor = Color.Red;
-            else
-                tb.BackColor = System.Drawing.SystemColors.Window;
-            */
+           
         }
 
         private void busqueda()
@@ -220,6 +189,7 @@ namespace Presentacion
                 listaFiltrada = listaProductos.FindAll(Producto => Producto.Nombre.ToUpper().Contains(txtBuscar.Text.ToUpper()) || Producto.Marca.Nombre.ToUpper().Contains(txtBuscar.Text.ToUpper()) || Producto.CodigoArt.ToUpper().Contains(txtBuscar.Text.ToUpper()));
                 dgw.DataSource = null;
                 dgw.DataSource = listaFiltrada;
+               
             }
             else
             {
@@ -238,6 +208,18 @@ namespace Presentacion
             dgw.Columns["UrlImagen"].Visible = false;
             dgw.Columns["Descripcion"].Visible = false;
             dgw.Columns["Categoria"].Visible = false;
+        }
+
+        private void BtnAgregarMarcas_Click(object sender, EventArgs e)
+        {
+            Altas ventana = new Altas();
+            ventana.ShowDialog();
+        }
+
+        private void BtnCategorias_Click(object sender, EventArgs e)
+        {
+            AltaCategoria ventana = new AltaCategoria();
+            ventana.ShowDialog();
         }
     }
 }

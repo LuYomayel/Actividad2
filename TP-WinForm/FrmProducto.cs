@@ -29,6 +29,8 @@ namespace Presentacion
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio CategoriaNegocio = new CategoriaNegocio();
+            
+           
 
             try
             {
@@ -59,7 +61,17 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void ValidarCampos(  )
+        {
+            if (txtCodigo.Text == "" || txtNombre.Text == "" || txtDescripcion.Text == "" || txtUrlImagen.Text == "")
+            {
+                MessageBox.Show("no puede agregar si hay campos vacios");
 
+              
+               
+            }
+            
+        }
         public void cargarImagen(string img)
         {
             try
@@ -91,11 +103,17 @@ namespace Presentacion
 
                 if(producto.Id == 0)
                 {
-                    productoNegocio.agregar(producto);
-                    MessageBox.Show("agregado sin problema");
+
+                    ValidarCampos();
+                        
+                        productoNegocio.agregar(producto);
+                        MessageBox.Show("agregado sin problema");
+                   
+                    
                 }
                 else
                 {
+                    ValidarCampos();
                     productoNegocio.modificar(producto);
                     MessageBox.Show("modificado sin problema");
                 }
@@ -105,6 +123,14 @@ namespace Presentacion
 
                 throw;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+        DialogResult resultado = MessageBox.Show("Esta seguro que desea cancelar ?", "Se producira el cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+                Close();
         }
     }
 }
