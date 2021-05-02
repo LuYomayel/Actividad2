@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Modificar
+    partial class FrmProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,6 @@ namespace Presentacion
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.pbxProducto = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
@@ -46,7 +45,7 @@ namespace Presentacion
             this.lblUrlImagen = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.pbxProducto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -54,25 +53,25 @@ namespace Presentacion
             // txtCodigo
             // 
             this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigo.Location = new System.Drawing.Point(100, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(101, 20);
             this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(144, 20);
-            this.txtCodigo.TabIndex = 50;
+            this.txtCodigo.TabIndex = 10015;
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(33, 30);
+            this.lblCodigo.Location = new System.Drawing.Point(34, 23);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 48;
+            this.lblCodigo.TabIndex = 10013;
             this.lblCodigo.Text = "Código:";
             // 
             // numPrecio
             // 
             this.numPrecio.DecimalPlaces = 2;
-            this.numPrecio.Location = new System.Drawing.Point(100, 242);
+            this.numPrecio.Location = new System.Drawing.Point(101, 235);
             this.numPrecio.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -80,61 +79,51 @@ namespace Presentacion
             0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(120, 20);
-            this.numPrecio.TabIndex = 47;
+            this.numPrecio.TabIndex = 10012;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(33, 244);
+            this.lblPrecio.Location = new System.Drawing.Point(34, 237);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(40, 13);
-            this.lblPrecio.TabIndex = 46;
+            this.lblPrecio.TabIndex = 10011;
             this.lblPrecio.Text = "Precio:";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(40, 98);
+            this.lblMarca.Location = new System.Drawing.Point(41, 91);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(40, 13);
-            this.lblMarca.TabIndex = 45;
+            this.lblMarca.TabIndex = 10010;
             this.lblMarca.Text = "Marca:";
             // 
             // cboMarca
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(100, 95);
+            this.cboMarca.Location = new System.Drawing.Point(101, 88);
             this.cboMarca.MaxDropDownItems = 5;
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(144, 21);
-            this.cboMarca.TabIndex = 4;
-            // 
-            // pbxProducto
-            // 
-            this.pbxProducto.Location = new System.Drawing.Point(287, 30);
-            this.pbxProducto.Name = "pbxProducto";
-            this.pbxProducto.Size = new System.Drawing.Size(246, 225);
-            this.pbxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxProducto.TabIndex = 43;
-            this.pbxProducto.TabStop = false;
+            this.cboMarca.TabIndex = 10001;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(166, 288);
+            this.btnCancelar.Location = new System.Drawing.Point(167, 281);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.TabIndex = 10008;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(23, 288);
+            this.btnAceptar.Location = new System.Drawing.Point(24, 281);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 41;
+            this.btnAceptar.TabIndex = 10007;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -143,83 +132,82 @@ namespace Presentacion
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(100, 203);
+            this.cboCategoria.Location = new System.Drawing.Point(101, 196);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(144, 21);
-            this.cboCategoria.TabIndex = 39;
+            this.cboCategoria.TabIndex = 10005;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(100, 131);
+            this.txtDescripcion.Location = new System.Drawing.Point(101, 124);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(144, 20);
-            this.txtDescripcion.TabIndex = 150;
+            this.txtDescripcion.TabIndex = 10016;
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(100, 167);
+            this.txtUrlImagen.Location = new System.Drawing.Point(101, 160);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(144, 20);
-            this.txtUrlImagen.TabIndex = 10000;
+            this.txtUrlImagen.TabIndex = 10017;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(100, 59);
+            this.txtNombre.Location = new System.Drawing.Point(101, 52);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 20);
-            this.txtNombre.TabIndex = 50;
+            this.txtNombre.TabIndex = 10014;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(23, 206);
+            this.lblCategoria.Location = new System.Drawing.Point(24, 199);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(57, 13);
-            this.lblCategoria.TabIndex = 40;
+            this.lblCategoria.TabIndex = 10006;
             this.lblCategoria.Text = "Categoría:";
             // 
             // lblUrlImagen
             // 
             this.lblUrlImagen.AutoSize = true;
-            this.lblUrlImagen.Location = new System.Drawing.Point(19, 170);
+            this.lblUrlImagen.Location = new System.Drawing.Point(20, 163);
             this.lblUrlImagen.Name = "lblUrlImagen";
             this.lblUrlImagen.Size = new System.Drawing.Size(61, 13);
-            this.lblUrlImagen.TabIndex = 38;
+            this.lblUrlImagen.TabIndex = 10004;
             this.lblUrlImagen.Text = "Url Imagen:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(14, 134);
+            this.lblDescripcion.Location = new System.Drawing.Point(15, 127);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.lblDescripcion.TabIndex = 36;
+            this.lblDescripcion.TabIndex = 10003;
             this.lblDescripcion.Text = "Descripción:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(33, 62);
+            this.lblNombre.Location = new System.Drawing.Point(34, 55);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 34;
+            this.lblNombre.TabIndex = 10002;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtID
+            // pbxProducto
             // 
-            this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtID.Location = new System.Drawing.Point(323, 288);
-            this.txtID.MaxLength = 6;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(144, 20);
-            this.txtID.TabIndex = 10001;
+            this.pbxProducto.Location = new System.Drawing.Point(288, 23);
+            this.pbxProducto.Name = "pbxProducto";
+            this.pbxProducto.Size = new System.Drawing.Size(246, 225);
+            this.pbxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxProducto.TabIndex = 10009;
+            this.pbxProducto.TabStop = false;
             // 
-            // Modificar
+            // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 344);
-            this.Controls.Add(this.txtID);
+            this.ClientSize = new System.Drawing.Size(546, 319);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.numPrecio);
@@ -237,12 +225,9 @@ namespace Presentacion
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Modificar";
-            this.Text = "Modificar";
-            this.Load += new System.EventHandler(this.Modificar_Load);
+            this.Name = "FrmProducto";
+            this.Text = "FrmProducto";
+            this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();
             this.ResumeLayout(false);
@@ -269,6 +254,5 @@ namespace Presentacion
         private System.Windows.Forms.Label lblUrlImagen;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtID;
     }
 }

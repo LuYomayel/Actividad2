@@ -126,7 +126,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar agregar = new Agregar();
+            FrmProducto agregar = new FrmProducto();
             agregar.ShowDialog();
             cargarLista();
         }
@@ -135,7 +135,7 @@ namespace Presentacion
         {
             Producto seleccionado = (Producto)dgw.CurrentRow.DataBoundItem;
 
-            Modificar modificar = new Modificar(seleccionado);
+            FrmProducto modificar = new FrmProducto(seleccionado);
             modificar.ShowDialog();
             cargarLista();
         }

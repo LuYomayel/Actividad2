@@ -13,8 +13,6 @@ D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinFo
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP-WinForm.exe
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\TP-WinForm.pdb
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Form1.resources
-D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Agregar.resources
-D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Modificar.resources
 D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.Detalle.resources
 C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\bin\Debug\TP-WinForm.exe.config
 C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\bin\Debug\TP-WinForm.exe
@@ -34,3 +32,4 @@ C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\obj\Debug\Presentacion.csp
 C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\obj\Debug\TP-WinForm.exe
 C:\Users\aleh0\Downloads\Actividad2-master\TP-WinForm\obj\Debug\TP-WinForm.pdb
+D:\Luciano\UTN\OneDrive - frgp.utn.edu.ar\TSP\3er Cuatri\Programacion 3\TP-WinForm\TP-WinForm\obj\Debug\Presentacion.FrmProducto.resources
