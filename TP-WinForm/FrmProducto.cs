@@ -61,16 +61,22 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void ValidarCampos(  )
+        public int ValidarCampos(  )
         {
             if (txtCodigo.Text == "" || txtNombre.Text == "" || txtDescripcion.Text == "" || txtUrlImagen.Text == "")
             {
                 MessageBox.Show("no puede agregar si hay campos vacios");
 
-              
-               
+                return 1;
+
+
             }
-            
+            else
+
+            {
+
+                return 0;
+            }
         }
         public void cargarImagen(string img)
         {
@@ -101,21 +107,31 @@ namespace Presentacion
                 producto.Precio = numPrecio.Value;
                 productoNegocio.modificar(producto);
 
-                if(producto.Id == 0)
+                if (producto.Id == 0)
                 {
+                    if (producto.Id == 0)
+                    {
+                        int campo;
+                        campo = ValidarCampos();
+                        if (campo == 0)
+                        {
+                            productoNegocio.agregar(producto);
+                            MessageBox.Show("agregado sin problema");
+                        }
 
-                    ValidarCampos();
-                        
-                        productoNegocio.agregar(producto);
-                        MessageBox.Show("agregado sin problema");
-                   
-                    
-                }
-                else
-                {
-                    ValidarCampos();
-                    productoNegocio.modificar(producto);
-                    MessageBox.Show("modificado sin problema");
+
+
+                    }
+                    else
+                    {
+                        int campo;
+                        campo = ValidarCampos();
+                        if (campo == 0)
+                        {
+                            productoNegocio.modificar(producto);
+                            MessageBox.Show("agregado sin problema");
+                        }
+                    }
                 }
             }
             catch (Exception)
