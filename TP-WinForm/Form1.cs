@@ -33,10 +33,10 @@ namespace Presentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             cargarLista();
-            CbxClave.Items.Add("Codigo");
+            /*CbxClave.Items.Add("Codigo");
             CbxClave.Items.Add("Nombre");
             CbxClave.Items.Add("Precio");
-            CbxClave.SelectedIndex = 0;
+            CbxClave.SelectedIndex = 0;*/
         }
 
     
@@ -69,7 +69,7 @@ namespace Presentacion
         private void cargarListafiltrada()
         {
             ProductoNegocio productoNegocio = new ProductoNegocio();
-
+            /*
 
             try
             {
@@ -87,10 +87,7 @@ namespace Presentacion
 
                 //Oculto Columnas de la grilla.
                 //Puedo poner el indice de la columna o el nombre de la propiedad.
-                dgw.Columns["id"].Visible = false;
-                dgw.Columns["UrlImagen"].Visible = false;
-                dgw.Columns["Descripcion"].Visible = false;
-                dgw.Columns["Categoria"].Visible = false;
+                
 
 
 
@@ -101,6 +98,7 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
+            */
         }
 
 
@@ -142,7 +140,10 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            busqueda();
+
+            /* Comento lo que hiciste vos
+             * try
             {
                 if (txtBuscar.Text !="")
                 {
@@ -159,7 +160,7 @@ namespace Presentacion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }*/
 
 
         }
@@ -176,7 +177,7 @@ namespace Presentacion
 
         private void CbxClave_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CbxCriterio.Items.Clear();
+            /*CbxCriterio.Items.Clear();
             if (CbxClave.SelectedItem.ToString() == "Precio")
             {
                 CbxCriterio.Items.Add("Mayor a");
@@ -190,7 +191,7 @@ namespace Presentacion
                 CbxCriterio.Items.Add("Contiene");
                 CbxCriterio.Items.Add("Termina con");
             }
-            CbxCriterio.SelectedIndex = 0;
+            CbxCriterio.SelectedIndex = 0;*/
 
         }
 
@@ -198,11 +199,45 @@ namespace Presentacion
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
+            /// Lo que hizo el profe
+            busqueda();
+
+            /* Comento lo que hiciste
             TextBox tb = (TextBox)sender; // investigar
             if (tb.Text.Length == 0)
                 tb.BackColor = Color.Red;
             else
                 tb.BackColor = System.Drawing.SystemColors.Window;
+            */
+        }
+
+        private void busqueda()
+        {
+            //txtFiltro
+            List<Producto> listaFiltrada;
+            if (txtBuscar.Text != "")
+            {
+                listaFiltrada = listaProductos.FindAll(Producto => Producto.Nombre.ToUpper().Contains(txtBuscar.Text.ToUpper()) || Producto.Marca.Nombre.ToUpper().Contains(txtBuscar.Text.ToUpper()) || Producto.CodigoArt.ToUpper().Contains(txtBuscar.Text.ToUpper()));
+                dgw.DataSource = null;
+                dgw.DataSource = listaFiltrada;
+            }
+            else
+            {
+                dgw.DataSource = null;
+                dgw.DataSource = listaProductos;
+            }
+
+            ocultarColumnas();
+        }
+
+        private void ocultarColumnas()
+        {
+            //Oculto Columnas de la grilla.
+            //Puedo poner el indice de la columna o el nombre de la propiedad.
+            dgw.Columns["id"].Visible = false;
+            dgw.Columns["UrlImagen"].Visible = false;
+            dgw.Columns["Descripcion"].Visible = false;
+            dgw.Columns["Categoria"].Visible = false;
         }
     }
 }

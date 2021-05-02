@@ -32,10 +32,6 @@ namespace Presentacion
             this.dgw = new System.Windows.Forms.DataGridView();
             this.lblFiltro = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.CbxCriterio = new System.Windows.Forms.ComboBox();
-            this.LblCriterio = new System.Windows.Forms.Label();
-            this.LblClave = new System.Windows.Forms.Label();
-            this.CbxClave = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -54,17 +50,17 @@ namespace Presentacion
             // 
             this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw.Location = new System.Drawing.Point(24, 116);
+            this.dgw.Location = new System.Drawing.Point(24, 95);
             this.dgw.Name = "dgw";
             this.dgw.ReadOnly = true;
-            this.dgw.Size = new System.Drawing.Size(496, 224);
+            this.dgw.Size = new System.Drawing.Size(496, 245);
             this.dgw.TabIndex = 0;
             this.dgw.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgw_MouseClick);
             // 
             // lblFiltro
             // 
             this.lblFiltro.AutoSize = true;
-            this.lblFiltro.Location = new System.Drawing.Point(25, 86);
+            this.lblFiltro.Location = new System.Drawing.Point(27, 54);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(32, 13);
             this.lblFiltro.TabIndex = 2;
@@ -72,56 +68,19 @@ namespace Presentacion
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(63, 79);
+            this.txtBuscar.Location = new System.Drawing.Point(65, 47);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(391, 20);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
-            // CbxCriterio
-            // 
-            this.CbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxCriterio.FormattingEnabled = true;
-            this.CbxCriterio.Location = new System.Drawing.Point(63, 52);
-            this.CbxCriterio.Name = "CbxCriterio";
-            this.CbxCriterio.Size = new System.Drawing.Size(96, 21);
-            this.CbxCriterio.TabIndex = 9;
-            // 
-            // LblCriterio
-            // 
-            this.LblCriterio.AutoSize = true;
-            this.LblCriterio.Location = new System.Drawing.Point(15, 60);
-            this.LblCriterio.Name = "LblCriterio";
-            this.LblCriterio.Size = new System.Drawing.Size(42, 13);
-            this.LblCriterio.TabIndex = 10;
-            this.LblCriterio.Text = "Criterio:";
-            // 
-            // LblClave
-            // 
-            this.LblClave.AutoSize = true;
-            this.LblClave.Location = new System.Drawing.Point(20, 33);
-            this.LblClave.Name = "LblClave";
-            this.LblClave.Size = new System.Drawing.Size(37, 13);
-            this.LblClave.TabIndex = 12;
-            this.LblClave.Text = "Clave:";
-            // 
-            // CbxClave
-            // 
-            this.CbxClave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxClave.FormattingEnabled = true;
-            this.CbxClave.Location = new System.Drawing.Point(63, 25);
-            this.CbxClave.Name = "CbxClave";
-            this.CbxClave.Size = new System.Drawing.Size(96, 21);
-            this.CbxClave.TabIndex = 11;
-            this.CbxClave.SelectedIndexChanged += new System.EventHandler(this.CbxClave_SelectedIndexChanged);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBuscar.Image = global::TP_WinForm.Properties.Resources.registro_lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(460, 44);
+            this.btnBuscar.Location = new System.Drawing.Point(462, 29);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(58, 66);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 55);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -221,10 +180,6 @@ namespace Presentacion
             this.Controls.Add(this.Lbleliminar);
             this.Controls.Add(this.LblModificar);
             this.Controls.Add(this.LblAgregar);
-            this.Controls.Add(this.LblClave);
-            this.Controls.Add(this.CbxClave);
-            this.Controls.Add(this.LblCriterio);
-            this.Controls.Add(this.CbxCriterio);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnDetalle);
@@ -258,10 +213,6 @@ namespace Presentacion
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ComboBox CbxCriterio;
-        private System.Windows.Forms.Label LblCriterio;
-        private System.Windows.Forms.Label LblClave;
-        private System.Windows.Forms.ComboBox CbxClave;
         private System.Windows.Forms.Label LblAgregar;
         private System.Windows.Forms.Label LblModificar;
         private System.Windows.Forms.Label Lbleliminar;
