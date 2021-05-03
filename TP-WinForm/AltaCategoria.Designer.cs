@@ -96,7 +96,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AltaCategoria";
-            this.Text = "Alta Categoria";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

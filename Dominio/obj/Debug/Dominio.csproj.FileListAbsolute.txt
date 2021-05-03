@@ -10,3 +10,9 @@ C:\Users\aleh0\Downloads\fgfgfgfhgfjhkhklh\Actividad2\Dominio\obj\Debug\Dominio.
 C:\Users\aleh0\Downloads\fgfgfgfhgfjhkhklh\Actividad2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\aleh0\Downloads\fgfgfgfhgfjhkhklh\Actividad2\Dominio\obj\Debug\Dominio.dll
 C:\Users\aleh0\Downloads\fgfgfgfhgfjhkhklh\Actividad2\Dominio\obj\Debug\Dominio.pdb
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\bin\Debug\Dominio.dll
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\bin\Debug\Dominio.pdb
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\obj\Debug\Dominio.dll
+C:\Users\aleh0\Downloads\Yomanel Luciano-Herrera Alejandro\Actividad2\Dominio\obj\Debug\Dominio.pdb

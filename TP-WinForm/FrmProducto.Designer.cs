@@ -231,6 +231,7 @@ namespace Presentacion
             this.MinimizeBox = false;
             this.Name = "FrmProducto";
             this.Text = "FrmProducto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProducto_FormClosing);
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();

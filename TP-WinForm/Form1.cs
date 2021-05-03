@@ -128,6 +128,7 @@ namespace Presentacion
             FrmProducto agregar = new FrmProducto();
             agregar.ShowDialog();
             cargarLista();
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace Presentacion
             FrmProducto modificar = new FrmProducto(seleccionado);
             modificar.ShowDialog();
             cargarLista();
+           
         }
 
       
@@ -214,12 +216,15 @@ namespace Presentacion
         {
             Altas ventana = new Altas();
             ventana.ShowDialog();
+            
         }
 
-        private void BtnCategorias_Click(object sender, EventArgs e)
+       
+        
+        private void BtnCategorias_Click_1(object sender, EventArgs e)
         {
-            AltaCategoria ventana = new AltaCategoria();
-            ventana.ShowDialog();
+            AltaCategoria ventanacat = new AltaCategoria();
+            ventanacat.ShowDialog();
         }
     }
 }

@@ -18,7 +18,23 @@ namespace TP_WinForm
         {
             InitializeComponent();
         }
+        public bool ValidarCampos()
+        {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("hay campos vacios");
 
+                return false;
+
+
+            }
+            else
+
+            {
+
+                return true;
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Esta seguro que desea cancelar ?", "Se producira el cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -33,12 +49,16 @@ namespace TP_WinForm
 
             try
             {
-
+                bool campos;
+                campos = ValidarCampos();
                 Marca aux = new Marca();
                  aux.Nombre = txtNombre.Text;
-
-                marcanegocio.agregar(aux);
-                MessageBox.Show("agregado sin problema");
+                if (campos!=false)
+                {
+                    marcanegocio.agregar(aux);
+                    MessageBox.Show("agregado sin problema");
+                }
+               
 
 
             }

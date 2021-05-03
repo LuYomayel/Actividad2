@@ -61,22 +61,23 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-        public int ValidarCampos(  )
+        public bool ValidarCampos(  )
         {
             if (txtCodigo.Text == "" || txtNombre.Text == "" || txtDescripcion.Text == "" || txtUrlImagen.Text == "")
             {
-                MessageBox.Show("no puede agregar si hay campos vacios");
-
-                return 1;
+                MessageBox.Show("hay campos vacios");
+               
+                return false;
 
 
             }
-            else
-
+            else 
+            
             {
-
-                return 0;
+                
+                return true;
             }
+            
         }
         public void cargarImagen(string img)
         {
@@ -109,28 +110,27 @@ namespace Presentacion
 
                 if (producto.Id == 0)
                 {
-                    if (producto.Id == 0)
+                    bool  campo;
+                    campo = ValidarCampos();
+                    if (campo != false)
                     {
-                        int campo;
-                        campo = ValidarCampos();
-                        if (campo == 0)
-                        {
-                            productoNegocio.agregar(producto);
-                            MessageBox.Show("agregado sin problema");
-                        }
-
-
-
+                        productoNegocio.agregar(producto);
+                        MessageBox.Show("agregado sin problema");
+                    
                     }
-                    else
+
+
+
+                }
+                else
+                {
+                    bool campo;
+                    campo = ValidarCampos();
+                    if (campo !=false)
                     {
-                        int campo;
-                        campo = ValidarCampos();
-                        if (campo == 0)
-                        {
-                            productoNegocio.modificar(producto);
-                            MessageBox.Show("agregado sin problema");
-                        }
+                        productoNegocio.modificar(producto);
+                        MessageBox.Show("agregado sin problema");
+                      
                     }
                 }
             }
@@ -139,6 +139,8 @@ namespace Presentacion
 
                 throw;
             }
+            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -147,6 +149,11 @@ namespace Presentacion
 
             if (resultado == DialogResult.Yes)
                 Close();
+        }
+
+        private void FrmProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ValidarCampos();
         }
     }
 }

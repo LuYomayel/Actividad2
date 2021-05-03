@@ -165,6 +165,7 @@ namespace Presentacion
             this.BtnCategorias.Size = new System.Drawing.Size(44, 52);
             this.BtnCategorias.TabIndex = 18;
             this.BtnCategorias.UseVisualStyleBackColor = true;
+            this.BtnCategorias.Click += new System.EventHandler(this.BtnCategorias_Click_1);
             // 
             // btnDetalle
             // 
