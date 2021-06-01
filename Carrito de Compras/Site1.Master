@@ -5,22 +5,32 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Store</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+    <link href="Css/Styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header class="header">
-        <a href="default.aspx">
-            <img class="header__logo" src="img/storeIcon.png" alt="logotipo">
-            <p>Store</p>
-        </a>
+    <header>
+        <div class="ancho">
+            
+                <div class="logo">
+                    <a href="Default.aspx">
+                        <img class="img-logo" src="img/storeIcon.png" alt="logotipo">
+                    </a>
+                    <p><a class="navegacion__enlace " href="Default.aspx">Store</a></p>
+                </div>
+            <nav>
+            <ul>
+                <li><a href="default.aspx">Tienda</a></li>
+                <li><a href="About.aspx">Nosotros</a></li>
+                <li><a href="Carrito.aspx">Carrito</a></li>
+            </ul>
+            
+            </nav>
+        </div>
     </header>
-    <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="default.aspx">Tienda</a>
-        <a class="navegacion__enlace" href="About.aspx">Nosotros</a>
-        <a class="navegacion__enlace" href="Carrito.aspx">Carrito</a>
-    </nav>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
