@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 c4fdd6e872a1c8366f48e3f79be2c7e07d9b929d LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619223784 -0300	commit (initial): primer commit
+c4fdd6e872a1c8366f48e3f79be2c7e07d9b929d 5231d4fe839d4706058cf0cbd81f62ec16a53ebe LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619334610 -0300	commit: Funcion Agregar producto
+5231d4fe839d4706058cf0cbd81f62ec16a53ebe e28130eec459a1fe95a7508f5d99e3a0b522eb5a LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619464361 -0300	commit: eliminar y modificar listo
+e28130eec459a1fe95a7508f5d99e3a0b522eb5a f5be0a6b27ab613a73c340e9bbc0cc8141eff340 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619467672 -0300	commit: detalle listo
+f5be0a6b27ab613a73c340e9bbc0cc8141eff340 f5be0a6b27ab613a73c340e9bbc0cc8141eff340 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619885130 -0300	reset: moving to HEAD
+f5be0a6b27ab613a73c340e9bbc0cc8141eff340 56f8fa8bfe3abe330714361e6994f56e6bbdf659 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619885140 -0300	pull origin master: Fast-forward
+56f8fa8bfe3abe330714361e6994f56e6bbdf659 a79affa7832f5dab2434fe7afd748bcc86b88ff0 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619980771 -0300	commit: arreglo modificar
+a79affa7832f5dab2434fe7afd748bcc86b88ff0 1b55c2c3cfc27414486586b0e6fb37102ab1d293 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619982497 -0300	commit: Unifique agregar y modificar
+1b55c2c3cfc27414486586b0e6fb37102ab1d293 b9fe47152a9e9f6b3fd6dc2966df0918be392e34 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1619984070 -0300	commit: filtro de busqueda
+b9fe47152a9e9f6b3fd6dc2966df0918be392e34 892f90cc9951c30e49a5c0f61d898429ac7a1fa9 LuYomayel <luciano.yomayel@alumnos.frgp.utn.edu.ar> 1622563978 -0300	commit: Arrancamos
