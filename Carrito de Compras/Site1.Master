@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Carrito_de_Compras.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="header">
+        <a href="default.aspx">
+            <img class="header__logo" src="img/storeIcon.png" alt="logotipo">
+            <p>Store</p>
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="default.aspx">Tienda</a>
+        <a class="navegacion__enlace" href="About.aspx">Nosotros</a>
+        <a class="navegacion__enlace" href="Carrito.aspx">Carrito</a>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer class="footer">
+        <p class="footer__texto">Store - Todos los derechos reservados 2021</p>
+    </footer>
+</body>
+</html>
